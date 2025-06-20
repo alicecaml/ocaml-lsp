@@ -1,0 +1,14 @@
+(version v0.15.1)
+
+(build
+ (all_platforms ((action (run dune build -p %{pkg-self:name} -j %{jobs})))))
+
+(depends
+ (all_platforms
+  (ocaml dune re base-unix)))
+
+(source
+ (fetch
+  (url https://github.com/ocaml-ppx/cinaps/archive/v0.15.1.tar.gz)
+  (checksum
+   sha256=1be18e70f5d8a6b03566c3619b62836a26094fc7208fde46ab7b32ee64116170)))
